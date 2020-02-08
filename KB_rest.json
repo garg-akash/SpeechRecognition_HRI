@@ -1,0 +1,52 @@
+{
+"country abbreviation": "US",
+"cold_drinks": [
+    {
+        "drink": "Beer",
+        "alc": "yes"
+    },
+    {
+        "drink": "Vodka",
+        "alc": "yes"
+    },
+    {
+        "drink": "Juice",
+        "alc": "no"
+    },
+    {
+        "drink": "Ice Tea",
+        "alc": "no"
+    },
+    {
+        "drink": "Cold Coffee",
+        "alc": "no"
+    }
+],
+
+"hot_drinks": [
+    {
+        "drink": "Cappucino",
+        "alc": "no"
+    },
+    {
+        "drink": "Espresso",
+        "alc": "no"
+    },
+    {
+        "drink": "Latte",
+        "alc": "no"
+    },
+    {
+        "drink": "Lemon Tea",
+        "alc": "no"
+    },
+    {
+        "drink": "Ginger Tea",
+        "alc": "no"
+    }
+],
+"country": "United States",
+"place name": "Belmont",
+"state": "Massachusetts",
+"state abbreviation": "MA"
+}
