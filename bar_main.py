@@ -50,7 +50,7 @@ def menu(hot,cold):
     txt_to_sp(welcome,'en')
 
     hd_list= "We offer "+hot_drinks_sentence+" as a hot drink"
-    txt_to_sp(hd_list)
+    txt_to_sp(hd_list,'en')
 
     cd_list = "And, as a cold drink we have "+cold_drinks_sentence
     txt_to_sp(cd_list,'en')
@@ -118,12 +118,12 @@ def bot_ans(res,hotd,coldd,ord_doc):
         nouns = collect_nouns(ord_doc)
         for noun in nouns:
             print(noun)
-        if is_cold_or_hot(nouns, cold_drinks):
-            drink = drink_explicitly(nouns, cold_drinks)
+        if is_cold_or_hot(nouns, coldd):
+            drink = drink_explicitly(nouns, coldd)
             bot_answer="Your "+drink+" is coming right now!"
             print(bot_answer)
-        elif is_cold_or_hot(nouns, hot_drinks):
-            drink= drink_explicitly(nouns, hot_drinks)
+        elif is_cold_or_hot(nouns, hotd):
+            drink= drink_explicitly(nouns, hotd)
             bot_answer="Your "+drink+" is coming right now!"
             print(bot_answer)
         else:
@@ -142,7 +142,7 @@ while True:
     nlp = spacy.load('en_core_web_sm')
 
     while not cust_order:
-        text_to_speech(repeat_pls)
+        txt_to_sp(repeat_pls,'en')
         cust_order = sp_to_txt(mic)
         print(cust_order)
     order_doc = nlp(cust_order)
