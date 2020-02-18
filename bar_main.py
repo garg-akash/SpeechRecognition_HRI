@@ -9,7 +9,7 @@ from spacy.matcher import Matcher
 
 mic = sr.Microphone()
 ##Start Loading KB
-with open('KB_rest.json', 'r') as f:
+with open('KB_rest_full.json', 'r') as f:
 	rest_dict = json.load(f)
 
 # for rest in rest_dict:
