@@ -2,47 +2,79 @@
 "country abbreviation": "US",
 "cold_drinks": [
     {
-        "drink": "Beer",
+        "drink": "beer",
         "alc": "yes"
     },
     {
-        "drink": "Vodka",
+        "drink": "vodka",
         "alc": "yes"
     },
     {
-        "drink": "Juice",
+        "drink": "wine",
+        "alc": "yes"
+    },
+    {
+        "drink": "lemonade",
         "alc": "no"
     },
     {
-        "drink": "Ice Tea",
+        "drink": "orange juice",
         "alc": "no"
     },
     {
-        "drink": "Cold Coffee",
+        "drink": "apple juice",
+        "alc": "no"
+    },
+    {
+        "drink": "cola",
+        "alc": "no"
+    },
+    {
+        "drink": "ice tea",
+        "alc": "no"
+    },
+    {
+        "drink": "cold coffee",
         "alc": "no"
     }
 ],
 
 "hot_drinks": [
     {
-        "drink": "Cappucino",
+        "drink": "cappuccino",
         "alc": "no"
     },
     {
-        "drink": "Espresso",
+        "drink": "espresso",
         "alc": "no"
     },
     {
-        "drink": "Latte",
+        "drink": "latte",
         "alc": "no"
     },
     {
-        "drink": "Lemon Tea",
+        "drink": "lemon tea",
         "alc": "no"
     },
     {
-        "drink": "Ginger Tea",
+        "drink": "ginger tea",
         "alc": "no"
+    },
+    {
+        "drink": "Irish coffee",
+        "alc": "yes"
+    },
+    {
+        "drink": "glogg",
+        "alc": "yes"
+    },
+    {
+        "drink": "vodka tea",
+        "alc": "yes"
+    },
+    {
+        "drink": "butter beer",
+        "alc": "yes"
     }
 ],
 "country": "United States",

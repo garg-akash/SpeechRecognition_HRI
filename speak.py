@@ -11,13 +11,17 @@ def init_the_mic(mic):
     print("Please wait, while microphone is callibrating. It will take 4 seconds.")
     print("You can speak after you hear the beep.")
     with mic as source:
-        recognition.adjust_for_ambient_noise(source, duration=4)
+        recognition.adjust_for_ambient_noise(source, duration=2)
+    say = pyglet.media.load('beep.mp3', streaming=False)
+    say.play()
+    print("Please speak now!")
 
 def sp_to_txt(mic):
     init_the_mic(mic)
     speech_customer = ''
     with mic as source:
         audio_customer=recognition.listen(source)
+        print('Done Listening!');
     try:
         speech_customer = recognition.recognize_google(audio_customer)
         return speech_customer
@@ -27,12 +31,18 @@ def sp_to_txt(mic):
         print("Could not request results from Google SRS; {0}".format(e))
 
 def txt_to_sp(text, lang) :
-	file = gTTS(text=text, lang=lang)
-	fileN = 'txt_to_sp.mp3'
-	file.save(fileN)
+    file = gTTS(text=text, lang=lang)
+    fileN = 'txt_to_sp.mp3'
+    file.save(fileN)
 
-	say = pyglet.media.load(fileN, streaming=False)
-	say.play()
+    say = pyglet.media.load(fileN, streaming=False)
+    say.play()
 
-	time.sleep(say.duration)
-	os.remove(fileN)
+    time.sleep(say.duration)
+    os.remove(fileN)
+
+# def txt_to_sp(response, lang):
+#     language = 'en'  
+#     myobj = gTTS(text=response, lang=language, slow=False) 
+#     myobj.save("txt_to_sp.mp3") 
+#     os.system("mpg321 txt_to_sp.mp3") 
